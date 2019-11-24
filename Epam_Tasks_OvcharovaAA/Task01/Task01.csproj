@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="CSharpBasics.cs" />
     <Compile Include="CSharpLanguage.cs" />
+    <Compile Include="CSharpStrings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

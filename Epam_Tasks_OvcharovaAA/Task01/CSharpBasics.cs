@@ -32,32 +32,8 @@ namespace Task01
         {
             Console.WriteLine("Enter rectangle's sides (positive number):");
             int a, b;
-
-            while (true)
-            {
-                if(int.TryParse(Console.ReadLine(), out a))
-                {
-                    if(a < 1)
-                    {
-                        Console.Write("Enter correct value: ");
-                    }
-                    else
-                    {
-                        if (int.TryParse(Console.ReadLine(), out b))
-                        {
-                            if (b < 1)
-                            {
-                                Console.Write("Enter correct value: ");
-                            }
-                            else
-                            {
-                                break;
-                            }
-                        }
-                    }
-                    
-                }
-            }
+            a = Check();
+            b = Check();
             Console.WriteLine("Square = {0}", a * b);
         }
 
@@ -135,9 +111,43 @@ namespace Task01
         //Task1.6
         public void FontAdjustment()
         {
-            //processing...
+            Font font = new Font();
+            byte input;
+
+            do
+            {
+                Console.WriteLine("Параметры надписи: " + font);
+                Console.WriteLine("Введите:");
+                Console.WriteLine("\t1: Bold");
+                Console.WriteLine("\t2: Italic");
+                Console.WriteLine("\t3: Underline");
+                Console.WriteLine("\t4: Stop");
+
+                if (byte.TryParse(Console.ReadLine(), out input))
+                {
+                    if (input > 3 || input < 1)
+                    {
+                        Console.WriteLine("Введите число от 1 до 3");
+                        continue;
+                    }
+                    font ^= (Font)Math.Pow(2, input-1);
+                }
+                else
+                {
+                    Console.WriteLine("Введено некорректное значение!");
+                }
+            } while (input != 4);
+
         }
 
+        [Flags]
+        public enum Font : byte
+        {
+            None = 0,
+            Bold = 1,
+            Italic = 2,
+            Underline = 4
+        }
 
     }
 }
