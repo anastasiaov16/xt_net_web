@@ -37,10 +37,7 @@ namespace Task01
             int min = mas[0];
             foreach (var item in mas)
             {
-                if (item < min)
-                {
-                    min = item;
-                }
+               min = (item < min)? item : min;
             }
             return min;
         }
@@ -50,10 +47,7 @@ namespace Task01
             int max = mas[0];
             foreach (var item in mas)
             {
-                if (item > max)
-                {
-                    max = item;
-                }
+               max = (item > max) ? item : max;
             }
             return max;
         }
@@ -102,10 +96,7 @@ namespace Task01
                 {
                     for (var h = 0; h < Len; h++)
                     {
-                        if(mas[i,j,h] >= 0)
-                        {
-                            mas[i, j, h] = 0;
-                        }
+                       mas[i, j, h] = (mas[i,j,h] >= 0)? 0 : mas[i, j, h];
                     }
                 }
             }
@@ -128,10 +119,7 @@ namespace Task01
             int sum = 0;
             foreach (var item in mas)
             {
-                if(item > 0)
-                {
-                    sum += item;
-                }
+               sum += (item > 0) ? item : 0;
             }
             Console.WriteLine("Sum of non-negative array elements: {0}", sum);
         }
@@ -145,8 +133,7 @@ namespace Task01
             {
                 for (var j = 0; j < Len; j++)
                 {
-                    
-                        mas[i, j] = r.Next(0, 100);
+                    mas[i, j] = r.Next(0, 100);
                 }
             }
             return mas;
@@ -159,10 +146,7 @@ namespace Task01
             {
                 for (var j = 0; j < Len; j++)
                 {
-                    if((i + j) % 2 == 0)
-                    {
-                        sum += mas[i, j];
-                    }
+                   sum += ((i + j) % 2 == 0)? mas[i, j] : 0;
                 }
             }
             Console.WriteLine("Sum of elements standing in even positions: {0}", sum);
