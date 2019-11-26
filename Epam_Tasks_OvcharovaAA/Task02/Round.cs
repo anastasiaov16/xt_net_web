@@ -25,7 +25,7 @@ namespace Task02
 
                 else
                 {
-                    Console.WriteLine("Enter positive number, please");
+                    throw new ArgumentException("Enter positive number, please");
                 }
             }
         }
