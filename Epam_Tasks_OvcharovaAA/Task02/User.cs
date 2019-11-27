@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task02_User
+namespace Task02
 {
     public class User
     {
@@ -22,6 +22,7 @@ namespace Task02_User
             FirstName = firstName;
             SecondName = secondName;
             DateOfBirth = dateOfBirth;
+   
         }
 
 
@@ -104,9 +105,8 @@ namespace Task02_User
             return true;
         }
 
-        public void Show() => Console.WriteLine($"LastName = {LastName}, FirstName = {FirstName}, SecondNAme = {SecondName}, DateOfBirth = {DateOfBirth}, Age = {Age}.");
-
-
+        public virtual void Show() =>
+            Console.WriteLine($"LastName = {LastName}, FirstName = {FirstName}, SecondNAme = {SecondName}, DateOfBirth = {DateOfBirth}, Age = {Age}.");
 
         public static User ReadUser()
         {

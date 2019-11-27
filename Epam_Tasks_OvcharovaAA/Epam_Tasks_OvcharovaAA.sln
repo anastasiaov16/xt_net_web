@@ -7,11 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task00", "Epam_Tasks_Ovchar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task01", "Task01\Task01.csproj", "{2DDCC396-BC20-4253-8587-01DA195D2245}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task02_Round", "Task02\Task02_Round.csproj", "{72F0F6AB-C602-4A25-8EA9-86D311A657CC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task02_Triangle", "Task02_Triangle\Task02_Triangle.csproj", "{72C36A88-D35B-4A1C-8763-9663C2C189EC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task02_User", "Task02_User\Task02_User.csproj", "{0B078058-A4E5-4073-802C-8DB418C466E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task02", "Task02\Task02.csproj", "{72F0F6AB-C602-4A25-8EA9-86D311A657CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +27,6 @@ Global
 		{72F0F6AB-C602-4A25-8EA9-86D311A657CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72F0F6AB-C602-4A25-8EA9-86D311A657CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72F0F6AB-C602-4A25-8EA9-86D311A657CC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{72C36A88-D35B-4A1C-8763-9663C2C189EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72C36A88-D35B-4A1C-8763-9663C2C189EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72C36A88-D35B-4A1C-8763-9663C2C189EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72C36A88-D35B-4A1C-8763-9663C2C189EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0B078058-A4E5-4073-802C-8DB418C466E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0B078058-A4E5-4073-802C-8DB418C466E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0B078058-A4E5-4073-802C-8DB418C466E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0B078058-A4E5-4073-802C-8DB418C466E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

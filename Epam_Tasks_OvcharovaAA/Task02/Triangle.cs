@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task02_Triangle
+namespace Task02
 {
     public class Triangle
     {
@@ -105,7 +105,7 @@ namespace Task02_Triangle
 
         public double HalfPerimeter => Perimeter / 2;
 
-        public void Show() => Console.WriteLine($"A = {A}, B = {B}, C = {C}, Square = {Square}, Perimeter = {Perimeter}");
+        public void Show() => Console.WriteLine($"Square = {Square}, Perimeter = {Perimeter}");
 
         public static Triangle ReadTriangle()
         {

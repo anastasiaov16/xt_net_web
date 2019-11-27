@@ -33,7 +33,7 @@ namespace Task02
                                 round = Round.ReadRound();
                             }
 
-                            catch (Exception e)
+                            catch (ArgumentException e)
                             {
                                 Console.WriteLine(e.Message);
                             }
@@ -51,7 +51,7 @@ namespace Task02
                                 triangle = Triangle.ReadTriangle();
                             }
 
-                            catch (Exception e)
+                            catch (ArgumentException e)
                             {
                                 Console.WriteLine(e.Message);
                             }
@@ -69,12 +69,48 @@ namespace Task02
                                 user = User.ReadUser();
                             }
 
-                            catch (Exception e)
+                            catch (ArgumentException e)
                             {
                                 Console.WriteLine(e.Message);
                             }
 
                             user.Show();
+                            Console.WriteLine();
+                            break;
+                        case 5:
+                            Console.WriteLine("Task 5");
+                            Console.WriteLine("This app create employee.");
+                            Employee employee = new Employee();
+
+                            try
+                            {
+                                employee = Employee.ReadEmployee();
+                            }
+
+                            catch (ArgumentException e)
+                            {
+                                Console.WriteLine(e.Message);
+                            }
+
+                            employee.Show();
+                            Console.WriteLine();
+                            break;
+                        case 6:
+                            Console.WriteLine("Task 6");
+                            Console.WriteLine("This app create ring.");
+                            Ring ring = new Ring();
+
+                            try
+                            {
+                                ring = Ring.ReadRing();
+                            }
+
+                            catch (ArgumentException e)
+                            {
+                                Console.WriteLine(e.Message);
+                            }
+
+                            ring.Show();
                             Console.WriteLine();
                             break;
                         case 0:

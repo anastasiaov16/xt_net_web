@@ -30,7 +30,12 @@ namespace Task02
             }
         }
 
-        public Round() { }
+        public Round()
+        {
+            X = 0;
+            Y = 0;
+            Radius = 1;
+        }
 
         public Round(double rad, double x, double y)
         {
