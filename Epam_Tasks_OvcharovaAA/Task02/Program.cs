@@ -77,6 +77,33 @@ namespace Task02
                             user.Show();
                             Console.WriteLine();
                             break;
+                        case 4:
+                            Console.WriteLine("Task 4");
+                            Console.WriteLine("This app create MyString.");
+
+                            Console.WriteLine("Enter two strings:");
+                            var test1 = Console.ReadLine();
+                            var test2 = Console.ReadLine();
+
+                            MyString str1 = new MyString(test1);
+                            MyString str2 = new MyString(test2.ToCharArray());
+
+                            Console.WriteLine("{0} + {1} = {2}", str1.ToString(), str2.ToString(), MyString.Concat(str1, str2).ToString());
+
+                            Console.WriteLine((str1 == str2)? "Equal": "Not equal");
+
+                            Console.WriteLine("Enter the letter you want to find in the str1:");
+                            char let = Char.Parse(Console.ReadLine());
+                            Console.WriteLine("Index s : {0}", str1?.IndexOf(let));
+
+                            Console.WriteLine("Enter the the word to be converted to MyString:");
+                            string word = Console.ReadLine();
+                            Console.WriteLine((MyString)word);
+                            Console.WriteLine("ToUpper: {0}", ((MyString)word).Upper());
+                            Console.WriteLine("ToLower: {0}", ((MyString)word).Lower());
+
+                            Console.WriteLine();
+                            break;
                         case 5:
                             Console.WriteLine("Task 5");
                             Console.WriteLine("This app create employee.");

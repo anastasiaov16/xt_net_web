@@ -90,7 +90,12 @@ namespace Task02
             }
         }
 
-        public Triangle() { }
+        public Triangle()
+        {
+            A = 1;
+            B = 1;
+            C = 1;
+        }
 
         public Triangle(double a, double b, double c)
         {
