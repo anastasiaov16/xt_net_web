@@ -29,10 +29,7 @@ namespace Task02
 
         public double OutRad
         {
-            get
-            {
-                return outRad;
-            }
+            get => outRad;
             set
             {
                 if (value < 0)
@@ -46,12 +43,9 @@ namespace Task02
             }
         }
 
-        public double Radius
+        public double InRadius
         {
-            get
-            {
-                return base.Radius;
-            }
+            get => base.Radius;
             set
             {
                 if (value < 0)
@@ -63,7 +57,7 @@ namespace Task02
         }
 
 
-        public new double Square => (Math.PI * (Math.Pow(OutRad, 2)) - (Math.Pow(Radius, 2)));
+        public new double Square => (Math.PI * (Math.Pow(OutRad, 2)) - (Math.Pow(InRadius, 2)));
 
         public double Summ => (OuterDiam + InnerDiam);
 

@@ -6,52 +6,43 @@ using System.Threading.Tasks;
 
 namespace Task02
 {
-   public  class Round
+    public class Circle : Figure
     {
-        private double radius;
-        public double X { get; set; }
-        public double Y { get; set; }
+        private double rad;
+        public Point Center { get; set; }
 
         public double Radius
         {
-            get => radius;
+            get => rad;
 
             set
             {
-                if(value > 0)
+                if (value < 0)
                 {
-                    radius = value;
+                    throw new ArgumentException("Enter positive radius, please");
                 }
-
                 else
                 {
-                    throw new ArgumentException("Enter positive number, please");
+                    rad = value;
                 }
+
             }
         }
 
-        public Round()
+        public Circle(double radius, Point center)
         {
-            X = 0;
-            Y = 0;
-            Radius = 1;
+            Radius = radius;
+            Center = center;
         }
 
-        public Round(double rad, double x, double y)
+        public virtual double Length => 2 * Math.PI * Radius;
+
+        public override void Show() => Console.WriteLine($"Circle: \nCenter  = ({Center.X},{Center.Y})\nRadius = {Radius}\nLength = {Length}");
+
+        public static Circle ReadCircle()
         {
-            Radius = rad;
-            X = x;
-            Y = y;
-        }
-
-        public double Square => Math.PI * Radius * Radius;
-
-        public double Length => 2 * Math.PI * Radius;
-
-        public void Show() => Console.WriteLine($"Radius = {Radius}, X = {X}, Y = {Y}, Square = {Square}, Lenght = {Length}");
-        public static Round ReadRound()
-        {
-            Round round;
+            Circle circle;
+            Point center;
             while (true)
             {
                 Console.WriteLine("Enter digit of the x point.");
@@ -60,17 +51,17 @@ namespace Task02
                     Console.WriteLine("Enter digit of the y point.");
                     if (double.TryParse(Console.ReadLine(), out double y))
                     {
+                        center = new Point(x,y);
                         Console.WriteLine("Enter radius.");
                         if (double.TryParse(Console.ReadLine(), out double r))
                         {
-                            round = new Round(r, x, y);
+                            circle = new Circle(r, center);
                             break;
                         }
                     }
                 }
             }
-            return round;
+            return circle;
         }
     }
-
 }
