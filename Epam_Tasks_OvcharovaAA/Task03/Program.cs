@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace Task03
 {
-    class Program
+    public class Program
     {
         static void Main()
         {
+            //Lost.Read();
+            var txt = WordFrequency.Read();
+            Dictionary<string, int> result = WordFrequency.WordFrequence(txt);
+            WordFrequency.Show(result);
 
         }
     }

@@ -24,6 +24,7 @@ namespace Task03
             {
                 Console.Write("{0}, ",item);
             }
+            Console.WriteLine();
             GetLost(tmp);
             Console.WriteLine(tmp[0]);
         }
@@ -33,7 +34,7 @@ namespace Task03
             List<int> lst = new List<int>();
             for (int i = 0; i < N; i++)
             {
-                lst.Add(i);
+                lst.Add(i + 1);
             }
             return lst;
         }
@@ -41,10 +42,10 @@ namespace Task03
         public static List<int> GetLost(List<int> tmp)
         {
             int i = 1;
-            foreach (var item in tmp)
+            while(tmp.Count > 1)
             {
                 i = i % tmp.Count;
-                tmp.Remove(i);
+                tmp.RemoveAt(i);
                 i++;
             }
             return tmp;
