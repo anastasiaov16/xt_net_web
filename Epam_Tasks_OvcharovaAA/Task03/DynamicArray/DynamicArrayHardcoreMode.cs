@@ -22,7 +22,14 @@ namespace Task03
                 {
                     return base[index];
                 }
-                return base[Length + index];
+                else if (index >= -Length)
+                {
+                    return base[Length + index];
+                }
+                else
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
             }
             set
             {
@@ -30,7 +37,14 @@ namespace Task03
                 {
                     base[index] = value;
                 }
-                base[Length + index] = value;
+                else if (index >= -Length)
+                {
+                    base[Length + index] = value;
+                }
+                else
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
             }
         }
 
@@ -64,6 +78,33 @@ namespace Task03
                 res [i] = Array[i];
             }
             return res;
+        }
+
+        public static void ShowHM()
+        {
+            var mas = new List<int>();
+            Random r = new Random();
+            for (int i = 0; i < 9; i++)
+            {
+                mas.Add(r.Next(100));
+            }
+            Console.WriteLine("Dynamic Array Hardcore Mode:");
+            var res = new DynamicArrayHardcoreMode<int>(mas, mas.Count);
+
+            Console.WriteLine($"Length: {res.Length}\nCapacity: {res.Capacity}");
+            Console.WriteLine("New Array:");
+            foreach (var item in res)
+            {
+                Console.Write($"{item} ");
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Last element");
+            Console.WriteLine(res[-1]);
+
+            //res.NewCapacity(12); 
+            Console.WriteLine();
+            Console.WriteLine();
         }
     }
 }

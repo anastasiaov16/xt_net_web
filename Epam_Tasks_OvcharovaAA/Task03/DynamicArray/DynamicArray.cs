@@ -198,6 +198,7 @@ namespace Task03
                 mas.Add(i);
             }
 
+            Console.WriteLine("Dynamic Array:");
             var res = new DynamicArray<int>(mas, mas.Count);
 
             Console.WriteLine($"Length: {res.Length}\nCapacity: {res.Capacity}");
@@ -222,8 +223,8 @@ namespace Task03
             foreach (var item in res)
             {
                 Console.Write($"{item} ");
-            }
-
+            }       
+            Console.WriteLine();
             Console.WriteLine();
         }
     }
