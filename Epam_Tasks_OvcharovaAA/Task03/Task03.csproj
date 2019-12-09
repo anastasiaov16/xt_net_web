@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DynamicArray\CycledDynamicArray.cs" />
+    <Compile Include="DynamicArray\DynamicArray.cs" />
+    <Compile Include="DynamicArray\DynamicArrayHardcoreMode.cs" />
     <Compile Include="Lost.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
