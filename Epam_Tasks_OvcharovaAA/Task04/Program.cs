@@ -8,10 +8,12 @@ namespace Task04
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             CustomSort.ShowFirstTask();
             CustomSort.ShowSecondTask();
+            NumberArraySum.ShowFourthTask();
+            NumberArraySum.ShowFifthTask();
         }
     }
 }

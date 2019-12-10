@@ -8,6 +8,7 @@ namespace Task03
 {
     class DynamicArrayHardcoreMode<T> : DynamicArray<T>, ICloneable
     {
+        #region ctor
         public DynamicArrayHardcoreMode() { }
 
         public DynamicArrayHardcoreMode(int n) : base(n) { }
@@ -47,7 +48,9 @@ namespace Task03
                 }
             }
         }
+        #endregion
 
+        #region methods
         public object Clone()
         {
             var temp = new DynamicArrayHardcoreMode<T>(Capacity);
@@ -79,7 +82,9 @@ namespace Task03
             }
             return res;
         }
+        #endregion
 
+        #region show
         public static void ShowHM()
         {
             var mas = new List<int>();
@@ -106,5 +111,6 @@ namespace Task03
             Console.WriteLine();
             Console.WriteLine();
         }
+        #endregion
     }
 }

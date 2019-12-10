@@ -16,7 +16,7 @@ namespace Task03
         public int Capacity { get; set; }
 
         public  int Length { get; set; }
-
+        #region ctor
         public DynamicArray()
         {
             Array = new T[startCapacity];
@@ -41,7 +41,8 @@ namespace Task03
                 Add(item);
             }
         }
-
+        #endregion
+        #region methods
         public void Add(T item)
         {
             if (Capacity == Length)
@@ -189,6 +190,9 @@ namespace Task03
             return this.GetEnumerator();
         }
 
+        #endregion
+
+        #region show
         public static void Show()
         {
             var mas = new List<int>();
@@ -227,5 +231,6 @@ namespace Task03
             Console.WriteLine();
             Console.WriteLine();
         }
+        #endregion
     }
 }

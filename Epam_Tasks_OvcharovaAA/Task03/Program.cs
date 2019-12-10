@@ -15,8 +15,9 @@ namespace Task03
             {
                 Console.WriteLine("3,1 LOST.");
                 Console.WriteLine("3,2 WORD FREQUENCY.");
-                Console.WriteLine("3,3 DYNAMIC ARRAY.");
-                Console.WriteLine("3,4 DYNAMIC ARRAY (HARDCORE MODE - CYCLED ARRAY).");
+                Console.WriteLine("3,3 DYNAMIC ARRAY AND HARDCORE MODE.");
+                Console.WriteLine("3,4 CYCLED ARRAY.");
+                Console.WriteLine("0 Exit.");
                 Console.WriteLine();
                 if (double.TryParse(Console.ReadLine(), out selection))
                 {
@@ -43,7 +44,9 @@ namespace Task03
                                 Console.WriteLine(item);
                             }
                             break;
-                }
+                        case 0:
+                            break;
+                    }
             }
             
             } while (selection != 0);

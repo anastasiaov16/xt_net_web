@@ -8,6 +8,7 @@ namespace Task04
 {
     class CustomSort
     {
+        #region methods
         public static void Sort<T>(ref T[] collection, Func<T, T,bool> sorted)
         {
             for (int i = 0; i < collection.Length; i++)
@@ -43,7 +44,9 @@ namespace Task04
                 else return false;
             }
         }
+        #endregion
 
+        #region show
         public static void ShowFirstTask()
         {
             int[] tmp = new int[10];
@@ -76,8 +79,6 @@ namespace Task04
         {
             string[] str = "When you said your last goodbye\nI died a little bit inside\nI lay in tears in bed all night\nAlone without you by my side".ToLower().Split(' ', '\n', '.', ',');
 
-
-
             Console.WriteLine("Unsorted string:");
             foreach (var item in str)
             {
@@ -96,5 +97,6 @@ namespace Task04
             }
             Console.WriteLine();
         }
+        #endregion
     }
 }

@@ -9,13 +9,17 @@ namespace Task03
 {
     class CycledDynamicArray<T> : DynamicArray<T>, IEnumerable<T>, IEnumerator<T>
     {
-        private int pos;
+        private int pos = 0;
+        #region ctor
         public CycledDynamicArray() : base() { }
 
         public CycledDynamicArray(int n) : base(n) { }
 
         public CycledDynamicArray(IEnumerable<T> mas, int length) : base(mas, length){}
 
+        #endregion
+
+        #region methods
         public new IEnumerator<T> GetEnumerator()
         {
             return this;
@@ -30,16 +34,19 @@ namespace Task03
         {
             get
             {
-                if(pos == -1 || pos >= Length)
+                try
+                {
+                    return Array[pos];
+                }
+                catch
                 {
                     throw new InvalidOperationException();
                 }
-                return Array[pos];
             }
             
         }
 
-        object IEnumerator.Current => Array[pos];
+        object IEnumerator.Current => Current;
 
         public void Dispose(){}
 
@@ -57,6 +64,7 @@ namespace Task03
         {
             pos = 0;
         }
+        #endregion
     }
 
 }
