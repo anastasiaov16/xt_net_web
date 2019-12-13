@@ -41,7 +41,7 @@ namespace Task04
                             NumberArraySum.ShowFifthTask();
                             break;
                         case 4.6:
-                            //processing...
+                            ISeekYou.Show();
                             break;
                         case 0:
                             break;

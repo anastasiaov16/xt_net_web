@@ -84,20 +84,43 @@ namespace Task04
         public static void Show()
         {
             List<int> searchTimes = new List<int>();
-            int[] tmp = new int[10];
+            int[] tmp = new int[1000];
             Random r = new Random();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 1000; i++)
             {
-                tmp[i] = r.Next(-50, 50);
+                tmp[i] = r.Next(-1000, 1000);
             }
 
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
             General(tmp);
-            searchTimes.Add((int)stopwatch.ElapsedTicks);
-            stopwatch.Stop();
-            
-            searchTimes.Sort();
+            Console.WriteLine($"Sorting {(int)stopWatch.ElapsedTicks} times");
+            stopWatch.Stop();
+            Console.WriteLine();
+
+            stopWatch.Start();
+            DelegateSort(tmp);
+            Console.WriteLine($"Sorting {(int)stopWatch.ElapsedTicks} times");
+            stopWatch.Stop();
+            Console.WriteLine();
+
+            stopWatch.Start();
+            LambdaSort(tmp);
+            Console.WriteLine($"Sorting {(int)stopWatch.ElapsedTicks} times");
+            stopWatch.Stop();
+            Console.WriteLine();
+
+            stopWatch.Start();
+            AnonSort(tmp);
+            Console.WriteLine($"Sorting {(int)stopWatch.ElapsedTicks} times");
+            stopWatch.Stop();
+            Console.WriteLine();
+
+            stopWatch.Start();
+            LinqSort(tmp);
+            Console.WriteLine($"Sorting {(int)stopWatch.ElapsedTicks} times");
+            stopWatch.Stop();
+            Console.WriteLine();
         }
     }
 }
