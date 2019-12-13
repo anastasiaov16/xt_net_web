@@ -62,10 +62,8 @@ namespace Task04
                 Console.Write($"{item} ");
             }
             Console.WriteLine();
-
-
-            var func = new Func<int, int, bool>((m,n) => m > n);
-            Sort(ref tmp, func);
+ 
+            Sort(ref tmp, (m, n) => m > n);
 
             Console.WriteLine("Sorted array:");
             foreach (var item in tmp)
