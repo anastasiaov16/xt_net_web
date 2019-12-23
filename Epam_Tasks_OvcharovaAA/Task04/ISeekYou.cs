@@ -66,7 +66,7 @@ namespace Task04
         {
             Predicate<int> operation = delegate (int x){ return (x > 0);};
             Console.WriteLine("Anonymus Sort:");
-            var res = array.SearchPositiveNumbers((m) => m > 0);
+            var res = array.SearchPositiveNumbers(operation);
             res.ForEach(x => Console.Write($"{x} "));
             Console.WriteLine();
         }
@@ -86,7 +86,7 @@ namespace Task04
             List<int> searchTimes = new List<int>();
             int[] tmp = new int[1000];
             Random r = new Random();
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 10; i++)
             {
                 tmp[i] = r.Next(-1000, 1000);
             }
@@ -94,31 +94,31 @@ namespace Task04
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
             General(tmp);
-            Console.WriteLine($"Sorting {(int)stopWatch.ElapsedTicks} times");
+            Console.WriteLine($"Sorting {(int)stopWatch.ElapsedTicks} ticks");
             stopWatch.Stop();
             Console.WriteLine();
 
             stopWatch.Start();
             DelegateSort(tmp);
-            Console.WriteLine($"Sorting {(int)stopWatch.ElapsedTicks} times");
+            Console.WriteLine($"Sorting {(int)stopWatch.ElapsedTicks} ticks");
             stopWatch.Stop();
             Console.WriteLine();
 
             stopWatch.Start();
             LambdaSort(tmp);
-            Console.WriteLine($"Sorting {(int)stopWatch.ElapsedTicks} times");
+            Console.WriteLine($"Sorting {(int)stopWatch.ElapsedTicks} ticks");
             stopWatch.Stop();
             Console.WriteLine();
 
             stopWatch.Start();
             AnonSort(tmp);
-            Console.WriteLine($"Sorting {(int)stopWatch.ElapsedTicks} times");
+            Console.WriteLine($"Sorting {(int)stopWatch.ElapsedTicks} ticks");
             stopWatch.Stop();
             Console.WriteLine();
 
             stopWatch.Start();
             LinqSort(tmp);
-            Console.WriteLine($"Sorting {(int)stopWatch.ElapsedTicks} times");
+            Console.WriteLine($"Sorting {(int)stopWatch.ElapsedTicks} ticks");
             stopWatch.Stop();
             Console.WriteLine();
         }
