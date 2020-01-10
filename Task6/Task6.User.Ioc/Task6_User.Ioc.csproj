@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Task6.User.BLL.Interface\Task6_User.BLL.Interface.csproj" />
+    <ProjectReference Include="..\Task6.User.DAL.Interface\Task6_User.DAL.Interface.csproj" />
+    <ProjectReference Include="..\Task6.User.DAL\Task6_User.DAL.csproj" />
+    <ProjectReference Include="..\Task6\Task6_User.BLL.csproj" />
+  </ItemGroup>
+
+</Project>
