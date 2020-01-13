@@ -112,16 +112,20 @@ namespace Task6_User.PL
                 throw new ArgumentException("Enter correct value");
             user = new User(name, birth);
             userLogic.Add(user);
+            ShowUser();
         }
 
         public static void DeleteUser()
         {
+            ShowUser();
             var userLogic = DependencyResolver.UserLogic;
             int id = -1;
             Console.WriteLine("Enter Id of the user you want to delete");
             if (!int.TryParse(Console.ReadLine(), out id))
                 throw new ArgumentException("Enter correct value");
             userLogic.Delete(id);
+            Console.WriteLine("Deleted");
+            ShowUser();
         }
 
         public static void GetAll()
@@ -155,6 +159,7 @@ namespace Task6_User.PL
             var awards = new Awards(Title);
 
             awardLogic.Add(awards);
+            ShowAwards();
         }
 
         public static void GetAwardById()
