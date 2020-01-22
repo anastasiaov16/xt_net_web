@@ -1,0 +1,18 @@
+li {
+    list-style-type: none;
+    margin: 10px;
+    font-size: 14px;
+   }
+ul {
+    margin: 0; 
+    padding: 0; 
+   }
+div{
+    background: #f9e497;
+    color: #880000;
+    border-radius: 8px;
+    box-shadow: 5px 5px 0 #880000;
+    width: 200px;
+    padding-top: 0;
+    border: 1px solid gray;
+}   

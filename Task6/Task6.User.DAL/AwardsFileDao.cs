@@ -13,7 +13,7 @@ namespace Task6_User.DAL
     {
         private static Dictionary<int, Awards> awardsList;
 
-        private static readonly string fileStream = @".users.json";
+        private static readonly string fileStream = @"C:\Users\Александр\Documents\xt_net_web\Task6\awards.txt";
 
         public AwardsFileDao()
         {

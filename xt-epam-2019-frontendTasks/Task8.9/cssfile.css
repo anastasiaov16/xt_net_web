@@ -1,0 +1,57 @@
+form{
+    width: 400px;
+    height: 50px;
+    margin: 20px;
+    
+}
+input{
+    position: absolute;
+    z-index: -1;
+    height: 0;
+}
+label, span{
+    display: inline-block;
+}
+span{
+    position: relative;
+    font-size: 20px;
+    padding: 5px;
+}
+span::before,
+span::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    z-index: -1;
+    margin-left: -4px;
+}
+span::before{
+    top: 0;
+    transform: skew(25deg);
+    background: linear-gradient(to bottom,rgb(218, 217, 217), rgb(184, 183, 183));
+}
+span::after{
+    bottom: 0;
+    transform: skew(-25deg);
+    background: linear-gradient(to top ,rgb(218, 217, 217),rgb(184, 183, 183));
+}
+
+
+input:checked + span{
+    color: white;
+}
+input:checked + span::before{
+    background: linear-gradient(to bottom, rgb(167, 243, 167),rgb(119, 236, 119));
+}
+input:checked + span::after{
+    background: linear-gradient(to top,  rgb(167, 243, 167),rgb(119, 236, 119));
+}
+
+label:last-child input:checked + span{
+    background: linear-gradient(rgb(167, 243, 167),rgb(119, 236, 119));
+}
+label:last-child input + span{
+    background: linear-gradient(rgb(218, 217, 217),rgb(184, 183, 183));
+}

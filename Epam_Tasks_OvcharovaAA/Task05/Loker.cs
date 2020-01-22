@@ -60,6 +60,35 @@ namespace Task05
             DirectoryCopy(source, logs, true);
         }
 
+        public static void DirectoryCopy(string source, string copy, bool check)
+        {
+            DirectoryInfo dir = new DirectoryInfo(source);
+            if (!dir.Exists)
+            {
+                throw new DirectoryNotFoundException("Source directory does not exist or could not be found: " + source);
+            }
+
+            if (!Directory.Exists(copy))
+            {
+                Directory.CreateDirectory(copy);
+            }
+
+            foreach (FileInfo fi in dir.GetFiles("*.txt"))
+            {
+                string tempPath = Path.Combine(copy, fi.Name);
+                fi.CopyTo(tempPath, true);
+            }
+
+            if (check)
+            {
+                foreach (DirectoryInfo subdir in dir.GetDirectories())
+                {
+                    string temppath = Path.Combine(copy, subdir.Name);
+                    DirectoryCopy(subdir.FullName, temppath, check);
+                }
+            }
+        }
+
         public static void BackUpSystem(int input, string sourceDirectory, string copy)
         {
             if (input == 1)
@@ -77,8 +106,8 @@ namespace Task05
             }
             else if (input == 2)
             {
-                Console.WriteLine("What time do you whant to back up?");
-                Console.WriteLine("Your input must be in format day.month.year + _ + hours + h + minutes + m + seconds + s");
+                Console.WriteLine("Enter the time for which you whant to back up");
+                Console.WriteLine("Format: day.month.year + _ + hours + h + minutes + m + seconds + s");
 
                 string[] txtList = Directory.GetFiles(sourceDirectory, "*.txt");
                 var tmp = Console.ReadLine();
@@ -106,7 +135,7 @@ namespace Task05
                         }
                         catch (IOException e)
                         {
-                            Console.WriteLine(e.Message);
+                           throw new Exception(e.Message);
                         }
                     }
 
@@ -116,37 +145,6 @@ namespace Task05
                 else
                 {
                     Console.WriteLine("Can't back up for this time :(");
-                }
-            }
-        }
-
-        public static void DirectoryCopy(string source, string copy, bool check)
-        {
-            DirectoryInfo dir = new DirectoryInfo(source);
-            if (!dir.Exists)
-            {
-                throw new DirectoryNotFoundException(
-                    "Source directory does not exist or could not be found: "
-                    + source);
-            }
-
-            if (!Directory.Exists(copy))
-            {
-                Directory.CreateDirectory(copy);
-            }
-
-            foreach (FileInfo fi in dir.GetFiles("*.txt"))
-            {
-                string tempPath = Path.Combine(copy, fi.Name);
-                fi.CopyTo(tempPath, true);
-            }
-
-            if (check)
-            {
-                foreach (DirectoryInfo subdir in dir.GetDirectories())
-                {
-                    string temppath = Path.Combine(copy, subdir.Name);
-                    DirectoryCopy(subdir.FullName, temppath, check);
                 }
             }
         }

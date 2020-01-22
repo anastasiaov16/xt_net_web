@@ -1,0 +1,66 @@
+body {
+    background-color: #4e6379;
+    font-family: sans-serif;
+  }
+  
+  .hosting {
+    width: 600px;
+    margin: 50px auto;
+    display: flex;
+    background: white;
+    border-radius: 5px;
+    padding: 10px 0;
+    box-shadow: 0 30px 50px -10px black;
+  }
+  
+  .hosting > div {
+    width: 200px;
+    text-align: center;
+  }
+  
+  .Cloud_hosting {
+    border-left: 1px solid #D9D9D9;
+    border-right: 1px solid #D9D9D9;
+  }
+  
+  .hosting > div > *:not(a) {
+    margin-bottom: 10px;
+  }
+  
+  .hosting > div > div {
+    display: inline-block;
+    width: 62px;
+    height: 42px;
+    background: url('http://htmlbook.ru/files/hosting.png') no-repeat;
+  }
+  
+  .Cloud_hosting div {
+    background-position: 0 -42px;
+  
+  }
+  
+  .Dedicated_server div {
+    background-position: 0 -84px;
+  }
+  
+  h1 {
+    font-size: 0.9em;
+    color: #f5663b;
+  }
+  
+  p {
+    font-size: 0.9em;
+  }
+  
+  a {
+    text-decoration: none;
+    display: inline-block;
+    background-color: #f5663b;
+    color: white;
+    padding: 4px 9px;
+    font-size: 0.8em;
+  }
+  
+  /*a:hover {
+    background: linear-gradient(0deg,#f5663b, #A62300);
+  }*/
