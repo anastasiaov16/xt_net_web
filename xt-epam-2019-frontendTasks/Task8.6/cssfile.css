@@ -9,7 +9,6 @@ div{
   vertical-align: bottom;
   display: inline-block;
 }
-/*сделать коло6нки родителями, состоящими из блоков, каждый блок прописать*/
 .em1 { height: 120px; }
 .em2 { height: 60px; }
 .em3 { height: 180px; }
