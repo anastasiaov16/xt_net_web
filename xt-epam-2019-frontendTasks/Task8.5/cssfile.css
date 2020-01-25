@@ -4,63 +4,58 @@ body {
   }
   
   .hosting {
+    display: flex;
     width: 600px;
     margin: 50px auto;
-    display: flex;
-    background: white;
-    border-radius: 5px;
     padding: 10px 0;
+    border-radius: 5px;
+    background: white;
     box-shadow: 0 30px 50px -10px black;
   }
   
+  a {
+    padding: 5px 10px;
+    display: inline-block;
+    color: white;
+    font-size: 0.8em;
+    background-color: #f5663b;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+
   .hosting > div {
     width: 200px;
     text-align: center;
   }
   
-  .Cloud_hosting {
+  .cloud {
     border-left: 1px solid #D9D9D9;
     border-right: 1px solid #D9D9D9;
   }
   
-  .hosting > div > *:not(a) {
-    margin-bottom: 10px;
-  }
-  
   .hosting > div > div {
-    display: inline-block;
-    width: 62px;
-    height: 42px;
-    background: url('http://htmlbook.ru/files/hosting.png') no-repeat;
+    width: 64px;
+    height: 44px;
+    display: inline-block; 
   }
   
-  .Cloud_hosting div {
-    background-position: 0 -42px;
-  
+  .shared div{
+    background: url('C:/Users/Александр/Documents/xt_net_web/xt-epam-2019-frontendTasks/Task8.5/task5.png') no-repeat;
+  }
+
+  .cloud div {
+    background: url('C:/Users/Александр/Documents/xt_net_web/xt-epam-2019-frontendTasks/Task8.5/task5.png') no-repeat;
+    background-position: 0 -44px; 
   }
   
-  .Dedicated_server div {
-    background-position: 0 -84px;
+  .ded div {
+    background: url('C:/Users/Александр/Documents/xt_net_web/xt-epam-2019-frontendTasks/Task8.5/task5.png') no-repeat;
+    background-position: 0 -86px;
   }
   
   h1 {
-    font-size: 0.9em;
     color: #f5663b;
-  }
-  
-  p {
     font-size: 0.9em;
   }
-  
-  a {
-    text-decoration: none;
-    display: inline-block;
-    background-color: #f5663b;
-    color: white;
-    padding: 4px 9px;
-    font-size: 0.8em;
-  }
-  
-  /*a:hover {
-    background: linear-gradient(0deg,#f5663b, #A62300);
-  }*/
