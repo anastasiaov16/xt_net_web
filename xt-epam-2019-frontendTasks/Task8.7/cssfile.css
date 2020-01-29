@@ -1,14 +1,14 @@
 .em1{
-    background: rgb(58, 167, 112);
+    background: #008b66;
     color: white;
     font-size: 1.1em;
     padding: 10px;
     margin-bottom: -8px;
 }
 .em2{
-    background: rgb(202, 202, 202);
+    background: #dfe6e1;
     color: black;
     border: 1px solid white;
-    margin-left: 20px;
+    margin-left: 28px;
     padding: 10px;
 }

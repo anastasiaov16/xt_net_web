@@ -1,0 +1,41 @@
+body{
+    background: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: #feb163;
+    position: relative;
+    background: black;
+    margin:0;
+    padding:7px 8px 7px 15px;
+    left: -15px;
+    top: -15px;
+    display: table;
+}
+h1:after{
+    content: "";
+    width: 30px;
+    height: 100%; 
+    display: block;
+    position: absolute;
+    background: black;
+    transform: skew(-30deg, 0deg);
+    z-index: -1;
+    right: -15px;
+    bottom: 0;
+  }
+  .ekg{
+    margin: auto;
+    text-align: left;
+    width: 500px;
+    padding:13px;
+    border: 1px solid white;
+    background: linear-gradient(to bottom, #ffffff , #dddddd);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+    z-index: 1;
+  }
+  p{
+      margin: 0;
+  }
