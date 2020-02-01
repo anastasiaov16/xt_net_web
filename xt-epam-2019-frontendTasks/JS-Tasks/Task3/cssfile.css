@@ -1,0 +1,59 @@
+body {
+    background: url("C:/Users/a/Documents/xt_net_web/xt-epam-2019-frontendTasks/JS-Tasks/Task3/vertical_cloth.png") repeat left top;
+    padding: 50px;
+    font-size: 18pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:  #34495e;
+}
+.marked {
+    background-color: yellowgreen;    
+}
+
+p.lable {
+    padding: 10px 10px 10px 15px;
+    margin: auto;
+}
+
+button {
+    background: yellowgreen;
+    width: 50px;
+    height: 30px;
+    font-size: 15pt;  
+    border-radius: 8px;  
+    border: 1px solid #bbb;
+}
+.list{
+    width: 300px;
+    height: 125px;
+}
+
+table {   
+    background: rgb(236,240,241);
+    border-radius: 8px;
+    border-top: 4px solid yellowgreen;
+    margin: auto;
+    padding-bottom: 15px;
+}
+
+th, td {
+    vertical-align: top;
+    width: 40%;
+}
+
+.btn {
+    width: 20%;
+}
+
+.btn>p{
+    margin: 40px 10px 0 10px;
+}
+
+ul {
+    list-style: none;
+    position: relative;
+    padding: 0 10px 10px 15px;
+    margin-top: 10px;
+}
+li{
+padding: 10px 5px 5px 0;
+}

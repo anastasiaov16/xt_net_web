@@ -1,0 +1,38 @@
+body{
+    background: url("C:/Users/a/Documents/xt_net_web/xt-epam-2019-frontendTasks/JS-Tasks/Task2/vertical_cloth.png") repeat left top;
+    padding: 50px;
+}
+h1{
+    color: #34495e;
+	margin: auto;
+	width: 300px;
+    text-align: center;
+    font-family: sans-serif;
+    padding-top: 15px;
+}
+.block{
+    width: 300px;
+    height: 250px;
+    margin: auto;
+    background: rgb(236,240,241);
+    border-radius: 8px;
+    border-top: 4px solid yellowgreen;
+}
+form{
+    padding-top: 15px;
+    text-align: center;
+}
+#text{
+    width: 80%;
+    margin-bottom: 25px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+}
+#but{
+    background: yellowgreen;
+    border-radius: 8px;
+    height: 30px;
+    width: 40%;
+    border: 1px solid #bbb;
+}
