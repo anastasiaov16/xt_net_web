@@ -1,0 +1,35 @@
+body{
+    background: url("C:/Users/a/Documents/xt_net_web/xt-epam-2019-frontendTasks/JS-Tasks/Task2/vertical_cloth.png") repeat left top;
+    padding: 50px;
+}
+
+div{
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    background: rgb(236,240,241);
+    box-shadow: 3px black;
+}
+
+img{
+    width: 600px;
+    height: 300px;   
+}
+#timer{
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 40px;
+}
+form{
+    width: 600px;
+    height: 20px;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+}
+button{
+    background: rgb(177, 175, 175);
+    border: 1px solid #bbb;
+    margin-left: 15px;
+}
